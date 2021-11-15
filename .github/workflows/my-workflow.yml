@@ -4,7 +4,11 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
+      - name: Checkout repo
         uses: actions/checkout@v2
-      - name: lint-project
+
+      - name: Installing node_modules
+        run: npm install
+
+      - name: Lint project
         run: make lint
