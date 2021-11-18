@@ -1,16 +1,18 @@
 import greetUser from './greet-user.js';
 import askQuestion from './ask-question.js';
-import getRandomNumber from './get-random-number.js';
 
-const brainEvenGame = () => {
+export const gameLogic = (gameRules, getExpression, getCorrectAnswer) => {
   let step = 1;
+  const rounds = 3;
   let isGameOver = false;
   const userName = greetUser();
 
-  for (; step <= 3; step += 1) {
-    const num = getRandomNumber();
-    const correctAnswer = num % 2 === 0 ? 'yes' : 'no';
-    const answer = askQuestion(num, correctAnswer);
+  console.log(gameRules);
+
+  for (; step <= rounds; step += 1) {
+    const expression = getExpression();
+    const correctAnswer = getCorrectAnswer(expression);
+    const answer = askQuestion(expression);
 
     isGameOver = answer !== correctAnswer;
 
@@ -28,4 +30,4 @@ const brainEvenGame = () => {
   console.log(`Congratulations, ${userName}`);
 };
 
-export default brainEvenGame;
+export default gameLogic;
