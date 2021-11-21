@@ -11,7 +11,7 @@ export const gameLogic = (gameRules, getExpression, getCorrectAnswer) => {
 
   for (; step <= rounds; step += 1) {
     const expression = getExpression();
-    const correctAnswer = getCorrectAnswer(expression);
+    const correctAnswer = getCorrectAnswer();
     const answer = askQuestion(expression);
 
     isGameOver = answer !== correctAnswer;
