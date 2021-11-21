@@ -1,6 +1,5 @@
-export const getRandomNumber = (min = 1, max = 100) => {
-  return Math.round(Math.random() * max) + min;
-};
+export const getRandomNumber = (min = 1, max = 100) =>
+  Math.round(Math.random() * (max - min)) + min;
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
@@ -19,4 +18,16 @@ export const getGCD = (a, b) => {
   }
 
   return divisor;
+};
+
+export const getArithmeticProgression = () => {
+  const start = getRandomNumber();
+  const step = getRandomNumber(1, 10);
+  const arr = [start];
+
+  for (let i = 1; i < 10; i += 1) {
+    arr.push(arr[i - 1] + step);
+  }
+
+  return arr;
 };
