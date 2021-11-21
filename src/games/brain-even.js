@@ -1,14 +1,14 @@
 import { gameLogic } from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
-let a;
+let num;
 
 const getQuestion = () => {
-  a = getRandomNumber();
-  return a;
+  num = getRandomNumber();
+  return num;
 };
 
-const getCorrectAnswer = () => (a % 2 === 0 ? 'yes' : 'no');
+const getCorrectAnswer = () => (num % 2 === 0 ? 'yes' : 'no');
 
 const brainEvenGame = () => {
   const gameRules =
