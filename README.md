@@ -5,3 +5,4 @@
 [![My Workflow Status](https://github.com/jprestor/backend-project-lvl1/actions/workflows/my-workflow.yml/badge.svg)](https://github.com/jprestor/backend-project-lvl1/actions/workflows/my-workflow.yml)
 [![asciicast](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD)
 [![asciicast](https://asciinema.org/a/qfXmA2qiq5OFVjEfuEHRmeudI.svg)](https://asciinema.org/a/qfXmA2qiq5OFVjEfuEHRmeudI)
+[![asciicast](https://asciinema.org/a/450542.svg)](https://asciinema.org/a/450542)
