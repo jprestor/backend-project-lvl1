@@ -27,7 +27,7 @@ export const gameLogic = (gameRules, getQuestion, getCorrectAnswer) => {
     console.log('Correct!');
   }
 
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default gameLogic;
