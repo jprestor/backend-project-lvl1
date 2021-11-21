@@ -11,8 +11,7 @@ const getQuestion = () => {
 const getCorrectAnswer = () => (num % 2 === 0 ? 'yes' : 'no');
 
 const brainEvenGame = () => {
-  const gameRules =
-    'Answer "yes" if the number is even, otherwise answer "no".';
+  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   gameLogic(gameRules, getQuestion, getCorrectAnswer);
 };
