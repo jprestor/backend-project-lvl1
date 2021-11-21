@@ -1,4 +1,6 @@
-export const getRandomNumber = (max = 100) => Math.round(Math.random() * max);
+export const getRandomNumber = (min = 1, max = 100) => {
+  return Math.round(Math.random() * max) + min;
+};
 
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
