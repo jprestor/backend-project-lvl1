@@ -3,7 +3,7 @@ import { getRandomNumber } from '../utils.js';
 
 let a;
 
-const getExpression = () => {
+const getQuestion = () => {
   a = getRandomNumber();
   return a;
 };
@@ -14,7 +14,7 @@ const brainEvenGame = () => {
   const gameRules =
     'Answer "yes" if the number is even, otherwise answer "no".';
 
-  gameLogic(gameRules, getExpression, getCorrectAnswer);
+  gameLogic(gameRules, getQuestion, getCorrectAnswer);
 };
 
 export default brainEvenGame;

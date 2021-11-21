@@ -4,7 +4,7 @@ import { getRandomNumber, getGCD } from '../utils.js';
 let a;
 let b;
 
-const getExpression = () => {
+const getQuestion = () => {
   a = getRandomNumber();
   b = getRandomNumber();
 
@@ -16,7 +16,7 @@ const getCorrectAnswer = () => String(getGCD(a, b));
 const brainGCDGame = () => {
   const gameRules = 'Find the greatest common divisor of given numbers.';
 
-  gameLogic(gameRules, getExpression, getCorrectAnswer);
+  gameLogic(gameRules, getQuestion, getCorrectAnswer);
 };
 
 export default brainGCDGame;

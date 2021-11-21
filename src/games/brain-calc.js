@@ -5,7 +5,7 @@ let a;
 let b;
 let randomOperator;
 
-const getExpression = () => {
+const getQuestion = () => {
   a = getRandomNumber();
   b = getRandomNumber();
   randomOperator = getRandomOperator();
@@ -32,7 +32,7 @@ const getCorrectAnswer = () => {
 const brainCalcGame = () => {
   const gameRules = 'What is the result of the expression?';
 
-  gameLogic(gameRules, getExpression, getCorrectAnswer);
+  gameLogic(gameRules, getQuestion, getCorrectAnswer);
 };
 
 export default brainCalcGame;
