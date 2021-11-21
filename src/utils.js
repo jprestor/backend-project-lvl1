@@ -4,7 +4,7 @@ export const getRandomNumber = (min = 1, max = 100) =>
 export const getRandomOperator = () => {
   const operators = ['+', '-', '*'];
 
-  return operators[getRandomNumber(2)];
+  return operators[getRandomNumber(0, 2)];
 };
 
 export const getGCD = (a, b) => {
