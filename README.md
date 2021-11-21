@@ -7,3 +7,4 @@
 [![Brain Calc Game](https://asciinema.org/a/qfXmA2qiq5OFVjEfuEHRmeudI.svg)](https://asciinema.org/a/qfXmA2qiq5OFVjEfuEHRmeudI)
 [![Brain GСD Game](https://asciinema.org/a/450542.svg)](https://asciinema.org/a/450542)
 [![Brain Progression Game](https://asciinema.org/a/qz77vw1dG6pCEDrZ2jJcslv6w.svg)](https://asciinema.org/a/qz77vw1dG6pCEDrZ2jJcslv6w)
+[![Brain Prime Game](https://asciinema.org/a/fMsIwINAo62LVEW2OyxWC9YrH.svg)](https://asciinema.org/a/fMsIwINAo62LVEW2OyxWC9YrH)
