@@ -1,22 +1,22 @@
-import greetUser from './greet-user.js';
-import askQuestion from './ask-question.js';
+import readlineSync from 'readline-sync';
 
 export const gameLogic = (gameRules, getQuestion, getCorrectAnswer) => {
   let step = 1;
   const rounds = 3;
-  let isGameOver = false;
-  const userName = greetUser();
 
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
   console.log(gameRules);
 
   for (; step <= rounds; step += 1) {
     const question = getQuestion();
     const correctAnswer = getCorrectAnswer();
-    const answer = askQuestion(question);
 
-    isGameOver = answer !== correctAnswer;
+    console.log(`Question: ${question}`);
+    const answer = readlineSync.question('Your answer: ');
 
-    if (isGameOver) {
+    if (answer !== correctAnswer) {
       console.log(
         `'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
