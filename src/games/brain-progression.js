@@ -1,8 +1,20 @@
 import { gameLogic } from '../index.js';
-import { getRandomNumber, getArithmeticProgression } from '../utils.js';
+import getRandomNumber from '../get-random-number.js';
 
 let prog;
 let progWithHidden;
+
+const getArithmeticProgression = () => {
+  const start = getRandomNumber();
+  const step = getRandomNumber(1, 10);
+  const arr = [start];
+
+  for (let i = 1; i < 10; i += 1) {
+    arr.push(arr[i - 1] + step);
+  }
+
+  return arr;
+};
 
 const getQuestion = () => {
   prog = getArithmeticProgression();

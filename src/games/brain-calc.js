@@ -1,9 +1,15 @@
 import { gameLogic } from '../index.js';
-import { getRandomNumber, getRandomOperator } from '../utils.js';
+import getRandomNumber from '../get-random-number.js';
 
 let a;
 let b;
 let randomOperator;
+
+const getRandomOperator = () => {
+  const operators = ['+', '-', '*'];
+
+  return operators[getRandomNumber(0, 2)];
+};
 
 const getQuestion = () => {
   a = getRandomNumber();

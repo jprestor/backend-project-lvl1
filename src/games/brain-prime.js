@@ -1,5 +1,19 @@
 import { gameLogic } from '../index.js';
-import { getRandomNumber, isPrime } from '../utils.js';
+import getRandomNumber from '../get-random-number.js';
+
+const isPrime = (num) => {
+  if (num === 1) {
+    return false;
+  }
+
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
+};
 
 let num;
 

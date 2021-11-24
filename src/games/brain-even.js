@@ -1,5 +1,5 @@
 import { gameLogic } from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../get-random-number.js';
 
 let num;
 
