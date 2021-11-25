@@ -50,11 +50,15 @@ brain-prime
 
 Determine an even number
 [![Brain Even Game](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD.svg)](https://asciinema.org/a/JfaxUdJRtqZnhb2Tgv1v5TBgD)
+
 Calculator. Arithmetic expressions to be evaluated.
 [![Brain Calc Game](https://asciinema.org/a/qfXmA2qiq5OFVjEfuEHRmeudI.svg)](https://asciinema.org/a/qfXmA2qiq5OFVjEfuEHRmeudI)
+
 Determination of the greatest common divisor.
 [![Brain GСD Game](https://asciinema.org/a/450542.svg)](https://asciinema.org/a/450542)
+
 Progression. Search for missing numbers in a sequence of numbers.
 [![Brain Progression Game](https://asciinema.org/a/qz77vw1dG6pCEDrZ2jJcslv6w.svg)](https://asciinema.org/a/qz77vw1dG6pCEDrZ2jJcslv6w)
+
 Determination of a prime number.
 [![Brain Prime Game](https://asciinema.org/a/fMsIwINAo62LVEW2OyxWC9YrH.svg)](https://asciinema.org/a/fMsIwINAo62LVEW2OyxWC9YrH)
