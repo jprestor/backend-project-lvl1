@@ -1,9 +1,6 @@
 import { gameLogic } from '../index.js';
 import getRandomNumber from '../get-random-number.js';
 
-let prog;
-let progWithHidden;
-
 const getArithmeticProgression = () => {
   const start = getRandomNumber();
   const step = getRandomNumber(1, 10);
@@ -16,23 +13,21 @@ const getArithmeticProgression = () => {
   return arr;
 };
 
-const getQuestion = () => {
-  prog = getArithmeticProgression();
-  progWithHidden = prog.slice();
+const getQuestionAndAnswer = () => {
+  const prog = getArithmeticProgression();
+  const progWithHidden = prog.slice();
   progWithHidden[getRandomNumber(0, 9)] = '..';
 
-  return progWithHidden.join(' ');
-};
-
-const getCorrectAnswer = () => {
+  const question = progWithHidden.join(' ');
   const hiddenIndex = progWithHidden.indexOf('..');
-  return String(prog[hiddenIndex]);
+  const answer = String(prog[hiddenIndex]);
+
+  return [question, answer];
 };
 
 const brainProgressionGame = () => {
   const gameRules = 'What number is missing in the progression?';
-
-  gameLogic(gameRules, getQuestion, getCorrectAnswer);
+  gameLogic(gameRules, getQuestionAndAnswer);
 };
 
 export default brainProgressionGame;

@@ -15,19 +15,17 @@ const isPrime = (num) => {
   return true;
 };
 
-let num;
+const getQuestionAndAnswer = () => {
+  const random = getRandomNumber(1, 10);
+  const answer = isPrime(random) ? 'yes' : 'no';
 
-const getQuestion = () => {
-  num = getRandomNumber(1, 10);
-  return num;
+  return [random, answer];
 };
-
-const getCorrectAnswer = () => (isPrime(num) ? 'yes' : 'no');
 
 const brainPrimeGame = () => {
   const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  gameLogic(gameRules, getQuestion, getCorrectAnswer);
+  gameLogic(gameRules, getQuestionAndAnswer);
 };
 
 export default brainPrimeGame;

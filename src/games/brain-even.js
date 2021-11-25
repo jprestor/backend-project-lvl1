@@ -1,19 +1,16 @@
 import { gameLogic } from '../index.js';
 import getRandomNumber from '../get-random-number.js';
 
-let num;
+const getQuestionAndAnswer = () => {
+  const random = getRandomNumber();
+  const answer = random % 2 === 0 ? 'yes' : 'no';
 
-const getQuestion = () => {
-  num = getRandomNumber();
-  return num;
+  return [random, answer];
 };
-
-const getCorrectAnswer = () => (num % 2 === 0 ? 'yes' : 'no');
 
 const brainEvenGame = () => {
   const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-  gameLogic(gameRules, getQuestion, getCorrectAnswer);
+  gameLogic(gameRules, getQuestionAndAnswer);
 };
 
 export default brainEvenGame;
