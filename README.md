@@ -1,6 +1,6 @@
 # backend-project-lvl1
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/b1ce2cae07ff591b8c14/maintainability)](https://codeclimate.com/github/jprestor/backend-project-lvl1/maintainability)
 [![Actions Status](https://github.com/jprestor/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/jprestor/backend-project-lvl1/actions)
 [![My Workflow Status](https://github.com/jprestor/backend-project-lvl1/actions/workflows/my-workflow.yml/badge.svg)](https://github.com/jprestor/backend-project-lvl1/actions/workflows/my-workflow.yml)
 
