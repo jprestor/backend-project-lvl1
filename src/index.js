@@ -8,7 +8,7 @@ export const gameLogic = (gameRules, getQuestionAndAnswer) => {
   console.log(`Hello, ${userName}!`);
   console.log(gameRules);
 
-  for (let step = 1; step <= rounds; step += 1) {
+  for (let step = 0; step < rounds; step += 1) {
     const [question, correctAnswer] = getQuestionAndAnswer();
 
     console.log(`Question: ${question}`);

@@ -1,29 +1,32 @@
 import { gameLogic } from '../index.js';
 import getRandomNumber from '../get-random-number.js';
 
+const gameRules = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
+
+const calculate = (a, b, operator) => {
+  switch (operator) {
+    case '+':
+      return a + b;
+    case '-':
+      return a - b;
+
+    default:
+      return a * b;
+  }
+};
+
 const getQuestionAndAnswer = () => {
   const randomA = getRandomNumber();
   const randomB = getRandomNumber();
-  const randomOperator = ['+', '-', '*'][getRandomNumber(0, 2)];
+  const randomOperator = operators[getRandomNumber(0, 2)];
   const question = `${randomA} ${randomOperator} ${randomB}`;
-
-  let answer;
-
-  if (randomOperator === '+') {
-    answer = randomA + randomB;
-  }
-  if (randomOperator === '-') {
-    answer = randomA - randomB;
-  }
-  if (randomOperator === '*') {
-    answer = randomA * randomB;
-  }
+  const answer = calculate(randomA, randomB, randomOperator);
 
   return [question, String(answer)];
 };
 
 const brainCalcGame = () => {
-  const gameRules = 'What is the result of the expression?';
   gameLogic(gameRules, getQuestionAndAnswer);
 };
 

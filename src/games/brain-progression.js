@@ -1,32 +1,46 @@
 import { gameLogic } from '../index.js';
 import getRandomNumber from '../get-random-number.js';
 
-const getArithmeticProgression = () => {
-  const start = getRandomNumber();
-  const step = getRandomNumber(1, 10);
-  const arr = [start];
+const gameRules = 'What number is missing in the progression?';
 
-  for (let i = 1; i < 10; i += 1) {
-    arr.push(arr[i - 1] + step);
+const getArithmeticProgression = (start, step, length) => {
+  const result = [];
+
+  for (let i = 0; i < length; i += 1) {
+    const current = start + step * i;
+    result.push(current);
   }
 
-  return arr;
+  return result;
+};
+
+const getStringWithHiddenElementFromArray = (arr, index) => {
+  const result = arr.slice();
+  result[index] = '..';
+  return String(result);
 };
 
 const getQuestionAndAnswer = () => {
-  const prog = getArithmeticProgression();
-  const progWithHidden = prog.slice();
-  progWithHidden[getRandomNumber(0, 9)] = '..';
+  const progressionStart = getRandomNumber();
+  const progressionStep = getRandomNumber(1, 10);
+  const progressionLength = 10;
+  const progression = getArithmeticProgression(
+    progressionStart,
+    progressionStep,
+    progressionLength,
+  );
+  const hiddenElementIndex = getRandomNumber(0, 9);
 
-  const question = progWithHidden.join(' ');
-  const hiddenIndex = progWithHidden.indexOf('..');
-  const answer = String(prog[hiddenIndex]);
+  const question = getStringWithHiddenElementFromArray(
+    progression,
+    hiddenElementIndex,
+  );
+  const answer = progression[hiddenElementIndex];
 
   return [question, answer];
 };
 
 const brainProgressionGame = () => {
-  const gameRules = 'What number is missing in the progression?';
   gameLogic(gameRules, getQuestionAndAnswer);
 };
 

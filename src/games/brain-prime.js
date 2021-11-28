@@ -1,6 +1,8 @@
 import { gameLogic } from '../index.js';
 import getRandomNumber from '../get-random-number.js';
 
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const isPrime = (num) => {
   if (num === 1) {
     return false;
@@ -23,8 +25,6 @@ const getQuestionAndAnswer = () => {
 };
 
 const brainPrimeGame = () => {
-  const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-
   gameLogic(gameRules, getQuestionAndAnswer);
 };
 
