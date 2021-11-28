@@ -3,9 +3,11 @@ import getRandomNumber from '../get-random-number.js';
 
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const isEven = (number) => number % 2 === 0;
+
 const getQuestionAndAnswer = () => {
   const random = getRandomNumber();
-  const answer = random % 2 === 0 ? 'yes' : 'no';
+  const answer = isEven(random) ? 'yes' : 'no';
 
   return [random, answer];
 };
