@@ -17,7 +17,7 @@ const getArithmeticProgression = (start, step, length) => {
 const getStringWithHiddenElementFromArray = (arr, index) => {
   const result = arr.slice();
   result[index] = '..';
-  return String(result);
+  return result.join(' ');
 };
 
 const getQuestionAndAnswer = () => {
@@ -35,7 +35,7 @@ const getQuestionAndAnswer = () => {
     progression,
     hiddenElementIndex,
   );
-  const answer = progression[hiddenElementIndex];
+  const answer = String(progression[hiddenElementIndex]);
 
   return [question, answer];
 };
