@@ -21,7 +21,7 @@ const calculate = (a, b, operator) => {
 const getQuestionAndAnswer = () => {
   const randomA = getRandomNumber();
   const randomB = getRandomNumber();
-  const randomOperator = operators[getRandomNumber(0, operators.length)];
+  const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
   const question = `${randomA} ${randomOperator} ${randomB}`;
   const answer = calculate(randomA, randomB, randomOperator);
 
